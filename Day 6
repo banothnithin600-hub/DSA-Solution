@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int findMaximumXOR(vector<int>& nums) {
+       int n = nums.size();
+       long long int maxlen = 0;
+    long long int val =0;
+    // int fir =0,sec =0;
+    //    for(int i=0;i<n;i++){
+    //     for(int j=i;j<n;j++){
+    //         if(nums[i]^nums[j]>maxlen)
+    //    val =nums[i]^nums[j];
+    //    maxlen = max(maxlen,val);
+    //    fir = nums[i],sec=nums[j];
+    //    }
+    //    }
+    //    return maxlen;//first solution
+    int xor1=0;
+    int maxl=INT_MIN;
+    for(int i=0;i<n;i++){
+        xor1|=nums[i];
+        maxl = max(maxl,xor1);
+    }
+    return xor1;
+    }
+};
