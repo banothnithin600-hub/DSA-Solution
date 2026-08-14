@@ -21,16 +21,16 @@ void inorder(TreeNode*root,vector<int>&ans){
 }
     vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
         vector<int>arr1;
-        vector<int>arr2;
+        
         inorder(root1,arr1);
-        inorder(root2,arr2);
+        inorder(root2,arr1);
         vector<int>ans;
         for(int i=0;i<arr1.size();i++){
             ans.push_back(arr1[i]);
         }
-        for(int i=0;i<arr2.size();i++){
-            ans.push_back(arr2[i]);
-        }
+       // for(int i=0;i<arr2.size();i++){
+           // ans.push_back(arr2[i]);
+       // }
       sort(ans.begin(),ans.end());
 
       return ans;
