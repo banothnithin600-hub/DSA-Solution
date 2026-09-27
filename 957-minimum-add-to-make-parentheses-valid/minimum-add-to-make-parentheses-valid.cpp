@@ -7,9 +7,9 @@ public:
             if(s[i]=='('){
                 close++;
             }else{
-                if(close>0){
+                if(close>0){//matched with this )
                     close--;
-                }else{
+                }else{   // close is zero py is no ( then we are count open:- )
                   open++;
                 }
             }
