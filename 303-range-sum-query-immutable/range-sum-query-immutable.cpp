@@ -1,5 +1,6 @@
 class NumArray {
 public:
+    //Segment Tree approach
     // This array will store the running sums (prefix sums)
     vector<int> pre;
 
